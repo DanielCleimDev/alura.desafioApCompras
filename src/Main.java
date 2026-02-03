@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -38,6 +35,7 @@ public class Main {
             }
         }
 
+        compras.sort(Comparator.comparing(Compra::getValor));
         System.out.println(compras);
         System.out.println("Limite Atual: " + cartao.getLimite());
         scanner.close();
